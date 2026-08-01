@@ -1,0 +1,106 @@
+.progress-page{
+    display:flex;
+    min-height:100vh;
+    background:#FFD3AC;
+}
+
+/* ================= CONTENT ================= */
+
+.progress-content{
+    flex:1;
+    background:#FFF7F1;
+    padding:45px;
+}
+
+.progress-content h1{
+    color:#E39A7B;
+    font-size:36px;
+    margin-bottom:8px;
+}
+
+.progress-content p{
+    color:#666;
+    margin-bottom:35px;
+}
+
+/* ================= LIST ================= */
+
+.progress-list{
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+}
+
+/* ================= CARD ================= */
+
+.progress-card{
+
+    background:#FFFFFF;
+
+    border-radius:18px;
+
+    padding:22px 28px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    box-shadow:0 8px 18px rgba(0,0,0,.08);
+
+    transition:.3s;
+}
+
+.progress-card:hover{
+
+    transform:translateY(-2px);
+
+    border:2px solid #FFB5AB;
+}
+
+.progress-card h3{
+
+    color:#E39A7B;
+
+    font-size:22px;
+
+    margin-bottom:6px;
+}
+
+.progress-card p{
+
+    color:#777;
+
+    margin:0;
+}
+
+/* ================= BUTTON ================= */
+
+.progress-card button{
+
+    width:55px;
+
+    height:55px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:#FFB5AB;
+
+    color:white;
+
+    font-size:22px;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.progress-card button:hover{
+
+    background:#E39A7B;
+
+    transform:scale(1.08);
+}

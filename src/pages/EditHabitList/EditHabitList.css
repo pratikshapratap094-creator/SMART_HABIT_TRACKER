@@ -1,0 +1,131 @@
+.edit-list-page{
+    display:flex;
+    min-height:100vh;
+    background:#FFD3AC;
+}
+
+.edit-list-content{
+    flex:1;
+    background:#FFF7F1;
+    padding:45px;
+}
+
+.edit-list-content h1{
+    color:#E39A7B;
+    font-size:36px;
+    margin-bottom:8px;
+}
+
+.edit-list-content p{
+    color:#666;
+    margin-bottom:30px;
+}
+
+.habit-list{
+    width:520px;
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+}
+
+.habit-card{
+
+    background:#fff;
+
+    border-radius:18px;
+
+    padding:18px 22px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+
+    transition:.3s;
+}
+
+.habit-card:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 12px 25px rgba(0,0,0,.10);
+}
+
+.habit-left{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+}
+
+.habit-icon{
+
+    width:58px;
+
+    height:58px;
+
+    border-radius:16px;
+
+    background:#FFF2EC;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:30px;
+
+    color:#E39A7B;
+}
+
+.habit-card h3{
+
+    color:#E39A7B;
+
+    font-size:24px;
+
+    margin-bottom:6px;
+}
+
+.habit-card p{
+
+    margin:0;
+
+    color:#555;
+
+    font-size:16px;
+}
+
+.arrow-btn{
+
+    width:50px;
+
+    height:50px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:#FFB5AB;
+
+    color:white;
+
+    font-size:24px;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.arrow-btn:hover{
+
+    background:#E39A7B;
+
+    transform:scale(1.08);
+}

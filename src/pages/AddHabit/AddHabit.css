@@ -1,0 +1,134 @@
+.add-habit-page{
+    display:flex;
+    min-height:100vh;
+    background:#FFD3AC;
+}
+
+/* ================= CONTENT ================= */
+
+.add-habit-content{
+    flex:1;
+    background:#FFF7F1;
+
+    padding:50px;
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+
+.add-habit-content h1{
+    color:#E39A7B;
+
+    font-size:36px;
+    font-weight:700;
+
+    margin-bottom:40px;
+}
+
+/* ================= FORM CARD ================= */
+
+.habit-form{
+
+    width:520px;
+
+    background:#FFFFFF;
+
+    padding:40px;
+
+    border-radius:22px;
+
+    box-shadow:0 12px 30px rgba(0,0,0,.08);
+
+    display:flex;
+    flex-direction:column;
+}
+
+/* ================= LABEL ================= */
+
+.habit-form label{
+
+    margin-bottom:10px;
+    margin-top:20px;
+
+    font-size:17px;
+    font-weight:600;
+
+    color:#444;
+}
+
+/* ================= INPUT ================= */
+
+.habit-form input{
+
+    width:100%;
+
+    padding:17px 20px;
+
+    border:1px solid #ECECEC;
+
+    border-radius:14px;
+
+    background:#FFFFFF;
+
+    font-size:16px;
+
+    color:#444;
+
+    box-shadow:0 3px 8px rgba(0,0,0,.05);
+
+    transition:.3s;
+}
+
+.habit-form input::placeholder{
+
+    color:#888;
+}
+
+.habit-form input:focus{
+
+    outline:none;
+
+    border:1px solid #FFB5AB;
+
+    box-shadow:0 0 10px rgba(255,181,171,.30);
+}
+
+/* ================= BUTTON ================= */
+
+.habit-form button{
+
+    width:100%;
+
+    margin-top:35px;
+
+    padding:18px;
+
+    border:none;
+
+    border-radius:16px;
+
+    background:#FFB5AB;
+
+    color:#FFFFFF;
+
+    font-size:18px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.habit-form button:hover{
+
+    background:#E39A7B;
+
+    transform:translateY(-2px);
+
+    box-shadow:0 8px 18px rgba(255,181,171,.35);
+}
+
+
+

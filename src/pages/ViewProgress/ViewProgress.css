@@ -1,0 +1,169 @@
+.progress-page{
+    display:flex;
+    min-height:100vh;
+    background:#FFD3AC;
+}
+
+.progress-content{
+    flex:1;
+    background:#FFF7F1;
+    padding:40px 55px;
+}
+
+.back-btn{
+    border:none;
+    background:none;
+    color:#E38E74;
+    font-size:20px;
+    cursor:pointer;
+    margin-bottom:20px;
+}
+
+.habit-header{
+    display:flex;
+    align-items:center;
+    gap:18px;
+    margin-bottom:30px;
+}
+
+.habit-icon{
+    width:70px;
+    height:70px;
+    background:#FFE9E5;
+    border-radius:16px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:35px;
+}
+
+.habit-header h2{
+    color:#333;
+    font-size:30px;
+    margin-bottom:5px;
+}
+
+.habit-header p{
+    color:#555;
+    font-size:18px;
+}
+
+.month-title{
+    margin-bottom:20px;
+    color:#333;
+}
+
+.circle-wrapper{
+    display:flex;
+    justify-content:center;
+    margin-bottom:40px;
+}
+
+.circle-progress{
+
+    width:220px;
+    height:220px;
+
+    border-radius:50%;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.circle-inner{
+
+    width:160px;
+    height:160px;
+
+    background:white;
+
+    border-radius:50%;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+}
+
+.circle-inner h1{
+    color:#333;
+    font-size:40px;
+    margin:0;
+}
+
+.circle-inner span{
+    color:#555;
+    font-size:18px;
+}
+
+.stats{
+
+    display:flex;
+    gap:20px;
+
+    justify-content:center;
+
+    margin-bottom:35px;
+}
+
+.stat-box{
+
+    width:160px;
+
+    background:white;
+
+    border-radius:15px;
+
+    padding:20px;
+
+    text-align:center;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+}
+
+.stat-box h2{
+
+    color:#333;
+
+    margin-bottom:10px;
+}
+
+.stat-box p{
+
+    color:#666;
+
+    font-size:15px;
+}
+
+.motivation{
+
+    width:540px;
+
+    margin:auto;
+
+    background:#FFE8DA;
+
+    border-radius:16px;
+
+    padding:18px 20px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+}
+
+.star{
+    font-size:28px;
+}
+
+.motivation h4{
+    color:#333;
+    margin-bottom:6px;
+}
+
+.motivation p{
+    color:#555;
+}

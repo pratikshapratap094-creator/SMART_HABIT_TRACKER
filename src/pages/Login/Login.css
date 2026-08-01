@@ -1,0 +1,130 @@
+.login-container{
+    width:100%;
+    min-height:100vh;
+    background:#FFD3AC;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:30px;
+}
+
+.login-card{
+    width:1120px;
+    min-height:650px;
+    background:#FFFFFF;
+    display:flex;
+    border-radius:30px;
+    overflow:hidden;
+    box-shadow:0 15px 35px rgba(0,0,0,.10);
+}
+
+/* LEFT SECTION */
+
+.left-section{
+    flex:1;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:60px;
+}
+
+.login-image{
+    width:430px;
+    max-width:100%;
+    height:auto;
+    object-fit:contain;
+}
+
+/* RIGHT SECTION */
+
+.right-section{
+    flex:1;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    padding:70px 65px;
+}
+
+.right-section h2{
+    text-align:center;
+    color:#E39A7B;
+    font-size:36px;
+    font-weight:700;
+    margin-bottom:10px;
+}
+
+.login-subtitle{
+    text-align:center;
+    color:#666;
+    font-size:16px;
+    line-height:1.5;
+    margin-bottom:35px;
+}
+
+/* FORM */
+
+.right-section form{
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+}
+
+.right-section input{
+    width:100%;
+    padding:16px 18px;
+    border:1px solid #E6E6E6;
+    border-radius:14px;
+    background:#FFFFFF;
+    font-size:16px;
+    color:#444;
+    transition:.3s;
+}
+
+.right-section input::placeholder{
+    color:#999;
+}
+
+.right-section input:focus{
+    outline:none;
+    border:1px solid #FFB5AB;
+    box-shadow:0 0 10px rgba(255,181,171,.35);
+}
+
+/* BUTTON */
+
+.right-section button{
+    margin-top:12px;
+    padding:16px;
+    border:none;
+    border-radius:14px;
+    background:#FFB5AB;
+    color:white;
+    font-size:18px;
+    font-weight:600;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.right-section button:hover{
+    background:#E39A7B;
+    transform:translateY(-2px);
+}
+
+/* REGISTER TEXT */
+
+.register-text{
+    margin-top:28px;
+    text-align:center;
+    font-size:16px;
+    color:#555;
+}
+
+.register-text a{
+    text-decoration:none;
+    color:#E39A7B;
+    font-weight:600;
+}
+
+.register-text a:hover{
+    color:#FFB5AB;
+}

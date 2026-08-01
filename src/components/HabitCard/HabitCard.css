@@ -1,0 +1,71 @@
+.habit-card{
+    background:#FFFFFF;
+    border-radius:20px;
+    padding:22px 25px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    box-shadow:0 8px 18px rgba(0,0,0,.08);
+    transition:all .3s ease;
+}
+
+.habit-card:hover{
+    transform:translateY(-4px);
+    box-shadow:0 14px 26px rgba(0,0,0,.12);
+}
+
+.habit-left{
+    display:flex;
+    align-items:center;
+    gap:18px;
+}
+
+.habit-icon{
+    width:60px;
+    height:60px;
+    border-radius:18px;
+    background:#FFE5DC;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:30px;
+    flex-shrink:0;
+}
+
+.habit-info h3{
+    margin:0;
+    color:#E38E74;
+    font-size:22px;
+    font-weight:700;
+}
+
+.habit-info p{
+    margin-top:8px;
+    color:#555;
+    font-size:17px;
+}
+
+.habit-checkbox{
+    width:24px;
+    height:24px;
+    cursor:pointer;
+    accent-color:#FF9E91;
+}
+
+
+
+.edit-btn{
+    background:#FFE8A3;
+}
+
+.edit-btn:hover{
+    background:#FFD54F;
+}
+
+.delete-btn{
+    background:#FFD6D6;
+}
+
+.delete-btn:hover{
+    background:#FF9E9E;
+}

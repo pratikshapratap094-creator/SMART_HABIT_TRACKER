@@ -1,0 +1,144 @@
+.delete-page{
+    display:flex;
+    min-height:100vh;
+    background:#FFD3AC;
+}
+
+.delete-content{
+    flex:1;
+    background:#FFF7F1;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    padding:40px;
+}
+
+.delete-card{
+    width:460px;
+    background:#FFFFFF;
+
+    border-radius:22px;
+
+    padding:40px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+    display:flex;
+    flex-direction:column;
+}
+
+.delete-icon{
+    font-size:60px;
+    text-align:center;
+    margin-bottom:15px;
+}
+
+.delete-card h1{
+    color:#E39A7B;
+    text-align:center;
+    font-size:34px;
+    margin-bottom:10px;
+}
+
+.delete-subtitle{
+    color:#666;
+    text-align:center;
+    font-size:16px;
+    line-height:1.6;
+    margin-bottom:30px;
+}
+
+/* ================= HABIT DETAILS ================= */
+
+.habit-details{
+    display:flex;
+    flex-direction:column;
+}
+
+.habit-details label{
+    color:#E39A7B;
+    font-size:17px;
+    font-weight:600;
+
+    margin-top:15px;
+    margin-bottom:8px;
+}
+
+.habit-details input{
+    width:100%;
+
+    padding:15px;
+
+    border:1px solid #ECECEC;
+
+    border-radius:12px;
+
+    background:#F8F8F8;
+
+    color:#444;
+
+    font-size:16px;
+}
+
+/* ================= BUTTONS ================= */
+
+.button-group{
+    display:flex;
+    gap:18px;
+    margin-top:35px;
+}
+
+.cancel-btn{
+    flex:1;
+
+    padding:15px;
+
+    border:none;
+
+    border-radius:14px;
+
+    background:#EAEAEA;
+
+    color:#555;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.cancel-btn:hover{
+    background:#D8D8D8;
+}
+
+.delete-btn{
+    flex:1;
+
+    padding:15px;
+
+    border:none;
+
+    border-radius:14px;
+
+    background:#FFB5AB;
+
+    color:#FFFFFF;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.delete-btn:hover{
+    background:#E39A7B;
+    transform:translateY(-2px);
+}

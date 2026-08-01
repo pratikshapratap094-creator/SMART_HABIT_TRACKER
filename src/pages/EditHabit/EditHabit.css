@@ -1,0 +1,101 @@
+.edit-page{
+    display:flex;
+    min-height:100vh;
+    background:#FFD3AC;
+}
+
+/* ================= CONTENT ================= */
+
+.edit-content{
+    flex:1;
+    background:#FFF7F1;
+    padding:45px 60px;
+}
+
+/* ================= BACK BUTTON ================= */
+
+.back-btn{
+    border:none;
+    background:none;
+    color:#E38E74;
+    font-size:20px;
+    cursor:pointer;
+    margin-bottom:25px;
+    transition:.3s;
+}
+
+.back-btn:hover{
+    color:#D56E4C;
+}
+
+/* ================= HEADING ================= */
+
+.edit-content h1{
+    color:#222;
+    font-size:38px;
+    margin-bottom:8px;
+}
+
+.edit-content p{
+    color:#666;
+    font-size:18px;
+    margin-bottom:35px;
+}
+
+/* ================= CARD ================= */
+
+.edit-card{
+    width:430px;
+    background:#FFFFFF;
+    border-radius:22px;
+    padding:35px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+    display:flex;
+    flex-direction:column;
+}
+
+/* ================= LABEL ================= */
+
+.edit-card label{
+    color:#333;
+    font-weight:600;
+    margin-bottom:10px;
+    margin-top:18px;
+}
+
+/* ================= INPUT ================= */
+
+.edit-card input{
+    padding:15px 18px;
+    border:1px solid #ECECEC;
+    border-radius:12px;
+    font-size:17px;
+    transition:.3s;
+}
+
+.edit-card input:focus{
+    outline:none;
+    border:1px solid #FFB5AB;
+    box-shadow:0 0 8px rgba(255,181,171,.4);
+}
+
+/* ================= SAVE BUTTON ================= */
+
+.save-btn{
+    margin-top:35px;
+    padding:16px;
+    border:none;
+    border-radius:14px;
+    background:#FF9E91;
+    color:#FFFFFF;
+    font-size:18px;
+    font-weight:600;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.save-btn:hover{
+    background:#E38E74;
+    transform:translateY(-2px);
+    box-shadow:0 8px 18px rgba(255,181,171,.35);
+}
