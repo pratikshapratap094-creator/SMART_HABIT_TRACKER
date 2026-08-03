@@ -34,11 +34,40 @@ function ViewProgress() {
     );
   }
 
-  const progress = habit.isCompleted ? 100 : 0;
+  // Current date
+const today = new Date();
 
-  const status = habit.isCompleted
-    ? "Completed"
-    : "Pending";
+// Current month (0-11)
+const currentMonth = today.getMonth();
+
+// Current year
+const currentYear = today.getFullYear();
+
+// Total days in current month
+const totalDaysInMonth = new Date(
+  currentYear,
+  currentMonth + 1,
+  0
+).getDate();
+
+// Count completed days in current month
+const completedDaysThisMonth = habit.completedDates.filter((date) => {
+  const completedDate = new Date(date);
+
+  return (
+    completedDate.getMonth() === currentMonth &&
+    completedDate.getFullYear() === currentYear
+  );
+}).length;
+
+// Calculate progress percentage
+const progress = Math.round(
+  (completedDaysThisMonth / totalDaysInMonth) * 100
+);
+
+// Status
+const status =
+  completedDaysThisMonth > 0 ? "Completed" : "Pending";
 
   return (
     <div className="progress-page">
@@ -102,8 +131,7 @@ function ViewProgress() {
           </div>
 
           <div className="stat-box">
-            <h2>{habit.completedDates.length}</h2>
-
+           <h2>{completedDaysThisMonth}</h2>
             <p>Completed Days</p>
           </div>
         </div>
