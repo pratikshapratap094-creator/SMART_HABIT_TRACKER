@@ -33,7 +33,7 @@ function Register() {
     }
 
     try {
-      const response = await fetch("https://smart-habit-tracker-nbqd.onrender.com/api/auth/login", {
+      const response = await fetch("https://smart-habit-tracker-nbqd.onrender.com/api/auth/register", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
