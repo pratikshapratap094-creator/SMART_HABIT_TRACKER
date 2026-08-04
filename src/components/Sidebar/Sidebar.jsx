@@ -1,7 +1,23 @@
+import { useContext } from "react";
+import { HabitContext } from "../../context/HabitContext";
 import "./Sidebar.css";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 
 function Sidebar() {
+  const navigate = useNavigate();
+  const { setHabits } = useContext(HabitContext);
+
+  const handleLogout = () => {
+
+  setHabits([]);
+
+  localStorage.removeItem("token");
+  localStorage.removeItem("user");
+  localStorage.removeItem("username");
+
+  navigate("/login");
+};
+
   return (
     <div className="sidebar">
 
@@ -35,9 +51,12 @@ function Sidebar() {
 
       <div className="logout">
 
-        <NavLink to="/login" className="menu-item">
+        <button
+          className="menu-item logout-btn"
+          onClick={handleLogout}
+        >
           🚪 Logout
-        </NavLink>
+        </button>
 
       </div>
 

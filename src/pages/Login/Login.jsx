@@ -45,10 +45,13 @@ function Login() {
       }
 
       // Save login information
-      localStorage.setItem("token", data.token);
+     localStorage.clear();
+
+localStorage.clear();
+
+localStorage.setItem("token", data.token);
 localStorage.setItem("user", JSON.stringify(data.user));
 localStorage.setItem("username", data.user.name);
-
       alert("Login Successful!");
 
       navigate("/dashboard");

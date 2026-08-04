@@ -34,14 +34,17 @@ if (storedUsername) {
           return;
         }
 
+        setHabits([]);
         // Get all habits
-        const habitsResponse = await  fetch("https://smart-habit-tracker-nbqd.onrender.com/api/auth/login", {
-            method: "GET",
-            headers: {
-              Authorization: `Bearer ${token}`,
-            },
-          }
-        );
+       const habitsResponse = await fetch(
+  "https://smart-habit-tracker-nbqd.onrender.com/api/habits",
+  {
+    method: "GET",
+    headers: {
+      Authorization: `Bearer ${token}`,
+    },
+  }
+);
 
         if (habitsResponse.status === 401) {
           localStorage.removeItem("token");
