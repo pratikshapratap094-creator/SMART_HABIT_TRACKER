@@ -9,6 +9,7 @@ function Dashboard() {
   const { habits, setHabits } = useContext(HabitContext);
 
   const navigate = useNavigate();
+  const [username, setUsername] = useState("");
 
   const [stats, setStats] = useState({
     totalHabits: 0,
@@ -22,6 +23,11 @@ function Dashboard() {
     const fetchDashboardData = async () => {
       try {
         const token = localStorage.getItem("token");
+        const storedUsername = localStorage.getItem("username");
+
+if (storedUsername) {
+  setUsername(storedUsername);
+}
 
         if (!token) {
           navigate("/login");
@@ -114,9 +120,9 @@ function Dashboard() {
 
           <div>
 
-            <h1>
-              Good Morning, <span>Pratiksha! 👋</span>
-            </h1>
+           <h1>
+  Good Morning, <span>{username}! 👋</span>
+</h1>
 
             <p>
               Keep going! Small steps every day.
