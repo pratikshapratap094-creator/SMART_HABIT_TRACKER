@@ -11,7 +11,7 @@ function HabitProvider({ children }) {
       const token = localStorage.getItem("token");
 
       const response = await fetch(
-        "http://localhost:5000/api/habits",
+        "https://smart-habit-tracker-nbqd.onrender.com/api/habits",
         {
           method: "POST",
           headers: {
@@ -46,7 +46,7 @@ function HabitProvider({ children }) {
       const token = localStorage.getItem("token");
 
       const response = await fetch(
-        `http://localhost:5000/api/habits/${id}`,
+        `https://smart-habit-tracker-nbqd.onrender.com/api/habits/${id}`,
         {
           method: "PUT",
           headers: {
@@ -82,7 +82,7 @@ function HabitProvider({ children }) {
       const token = localStorage.getItem("token");
 
       const response = await fetch(
-        `http://localhost:5000/api/habits/${id}`,
+        `https://smart-habit-tracker-nbqd.onrender.com/api/habits/${id}`,
         {
           method: "DELETE",
           headers: {
@@ -114,7 +114,7 @@ function HabitProvider({ children }) {
       const token = localStorage.getItem("token");
 
       const response = await fetch(
-        `http://localhost:5000/api/habits/${id}/complete`,
+        `https://smart-habit-tracker-nbqd.onrender.com/api/habits/${id}/complete`,
         {
           method: "PUT",
           headers: {

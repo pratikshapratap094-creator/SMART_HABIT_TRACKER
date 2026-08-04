@@ -35,9 +35,7 @@ if (storedUsername) {
         }
 
         // Get all habits
-        const habitsResponse = await fetch(
-          "http://localhost:5000/api/habits",
-          {
+        const habitsResponse = await  fetch("https://smart-habit-tracker-nbqd.onrender.com/api/auth/login", {
             method: "GET",
             headers: {
               Authorization: `Bearer ${token}`,
@@ -59,7 +57,7 @@ if (storedUsername) {
 
         // Get dashboard statistics
         const statsResponse = await fetch(
-          "http://localhost:5000/api/habits/stats",
+          "https://smart-habit-tracker-nbqd.onrender.com/api/habits/stats",
           {
             method: "GET",
             headers: {
