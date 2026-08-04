@@ -125,9 +125,8 @@ const status =
           </div>
 
           <div className="stat-box">
-            <h2>{habit.streak}</h2>
-
-            <p>Longest Streak</p>
+            <h2>{habit.longestStreak}</h2>
+<p>Longest Streak</p>
           </div>
 
           <div className="stat-box">

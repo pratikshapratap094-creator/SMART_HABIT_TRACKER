@@ -194,6 +194,10 @@ const completeHabit = async (req, res) => {
 
     habit.streak += 1;
 
+if (habit.streak > habit.longestStreak) {
+  habit.longestStreak = habit.streak;
+}
+
     await habit.save();
 
     res.status(200).json({

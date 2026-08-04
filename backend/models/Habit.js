@@ -23,10 +23,15 @@ const habitSchema = new mongoose.Schema(
       default: "Times",
     },
 
-    streak: {
-      type: Number,
-      default: 0,
-    },
+   streak: {
+  type: Number,
+  default: 0,
+},
+
+longestStreak: {
+  type: Number,
+  default: 0,
+},
 
     completedDates: [
       {
