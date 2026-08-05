@@ -158,26 +158,25 @@ const completeHabit = async (req, res) => {
       });
     }
 
-    const today = new Date().toISOString().split("T")[0];
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
+
+    const todayString = today.toISOString().split("T")[0];
 
     const completedToday = habit.completedDates.some(
-      (date) => new Date(date).toISOString().split("T")[0] === today
+      (date) =>
+        new Date(date).toISOString().split("T")[0] === todayString
     );
 
     if (completedToday) {
-      // Uncomplete habit
-
       habit.completedDates = habit.completedDates.filter(
         (date) =>
-          new Date(date).toISOString().split("T")[0] !== today
+          new Date(date).toISOString().split("T")[0] !== todayString
       );
 
       habit.isCompleted = false;
 
-      if (habit.streak > 0) {
-        habit.streak -= 1;
-      }
-
+     habit.streak = Math.max(0, habit.streak - 1);
       await habit.save();
 
       return res.status(200).json({
@@ -187,16 +186,39 @@ const completeHabit = async (req, res) => {
     }
 
     // Complete habit
+    habit.completedDates.push(today);
 
-    habit.completedDates.push(new Date());
+    habit.completedDates.sort(
+      (a, b) => new Date(a) - new Date(b)
+    );
+
+    let previousDate = null;
+
+    if (habit.completedDates.length > 1) {
+      previousDate = new Date(
+        habit.completedDates[habit.completedDates.length - 2]
+      );
+      previousDate.setHours(0, 0, 0, 0);
+    }
+
+    if (previousDate) {
+      const diffInDays =
+        (today - previousDate) / (1000 * 60 * 60 * 24);
+
+      if (diffInDays === 1) {
+        habit.streak += 1;
+      } else {
+        habit.streak = 1;
+      }
+    } else {
+      habit.streak = 1;
+    }
 
     habit.isCompleted = true;
 
-    habit.streak += 1;
-
-if (habit.streak > habit.longestStreak) {
-  habit.longestStreak = habit.streak;
-}
+    if (habit.streak > habit.longestStreak) {
+      habit.longestStreak = habit.streak;
+    }
 
     await habit.save();
 
@@ -214,25 +236,34 @@ if (habit.streak > habit.longestStreak) {
   }
 };
 
-/// =======================
+// =======================
+// DASHBOARD STATS
+// =======================
+// =======================
 // DASHBOARD STATS
 // =======================
 const getHabitStats = async (req, res) => {
   try {
-
     const habits = await Habit.find({
       user: req.user.id,
     });
 
-    const today = new Date().toISOString().split("T")[0];
+    const now = new Date();
+    const currentMonth = now.getMonth();
+    const currentYear = now.getFullYear();
 
     const totalHabits = habits.length;
 
+    // Habits completed at least once this month
     const completedHabits = habits.filter((habit) =>
-      habit.completedDates.some(
-        (date) =>
-          new Date(date).toISOString().split("T")[0] === today
-      )
+      habit.completedDates.some((date) => {
+        const completedDate = new Date(date);
+
+        return (
+          completedDate.getMonth() === currentMonth &&
+          completedDate.getFullYear() === currentYear
+        );
+      })
     ).length;
 
     const totalStreak = habits.reduce(
@@ -242,7 +273,11 @@ const getHabitStats = async (req, res) => {
 
     const longestStreak =
       habits.length > 0
-        ? Math.max(...habits.map((habit) => habit.streak))
+        ? Math.max(
+            ...habits.map(
+              (habit) => habit.longestStreak || 0
+            )
+          )
         : 0;
 
     res.status(200).json({
@@ -253,19 +288,13 @@ const getHabitStats = async (req, res) => {
     });
 
   } catch (error) {
-
     console.error("GET HABIT STATS ERROR:", error);
 
     res.status(500).json({
       message: error.message,
     });
-
   }
 };
-
-// =======================
-// EXPORTS
-// =======================
 module.exports = {
   addHabit,
   getHabits,
