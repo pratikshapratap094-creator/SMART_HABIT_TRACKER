@@ -82,14 +82,13 @@ if (storedUsername) {
     fetchDashboardData();
   }, [navigate, setHabits]);
 
-  const totalHabits = stats.totalHabits || habits.length;
+  const totalHabits = habits.length;
 
-  const completedHabits =
-    stats.completedHabits ||
-    habits.filter((habit) => habit.isCompleted === true).length;
+const completedHabits = habits.filter(
+  (habit) => habit.isCompleted
+).length;
 
-  const pendingHabits = totalHabits - completedHabits;
-
+const pendingHabits = totalHabits - completedHabits;
   const progress =
     totalHabits === 0
       ? 0
