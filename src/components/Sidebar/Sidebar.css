@@ -74,3 +74,76 @@
     cursor:pointer;
     font-size:16px;
 }
+
+/* ================= RESPONSIVE SIDEBAR ================= */
+
+@media (max-width: 768px) {
+
+    .sidebar {
+        width: 100%;
+        min-height: auto;
+        box-sizing: border-box;
+        padding: 15px;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .logo h2 {
+        font-size: 22px;
+        margin-bottom: 15px;
+    }
+
+    .menu {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .menu-item {
+        padding: 10px 14px;
+        font-size: 14px;
+        border-radius: 10px;
+    }
+
+    .menu-item:hover {
+        transform: none;
+    }
+
+    .logout {
+        margin-top: 10px;
+    }
+
+    .logout .menu-item {
+        justify-content: center;
+    }
+}
+
+
+/* ================= SMALL PHONES ================= */
+
+@media (max-width: 480px) {
+
+    .sidebar {
+        padding: 12px;
+    }
+
+    .logo h2 {
+        font-size: 20px;
+        margin-bottom: 12px;
+    }
+
+    .menu {
+        gap: 8px;
+    }
+
+    .menu-item {
+        padding: 9px 11px;
+        font-size: 13px;
+    }
+
+    .logout {
+        margin-top: 8px;
+    }
+
+}

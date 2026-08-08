@@ -128,3 +128,113 @@
 .login-text a:hover{
     color:#FFB5AB;
 }
+
+/* ================= RESPONSIVE REGISTER ================= */
+
+@media (max-width: 768px) {
+
+    .register-container {
+        padding: 20px;
+        min-height: 100vh;
+        box-sizing: border-box;
+    }
+
+    .register-card {
+        width: 100%;
+        min-height: auto;
+        flex-direction: column;
+        border-radius: 22px;
+    }
+
+    .left-section {
+        padding: 30px 25px 10px;
+    }
+
+    .register-image {
+        width: 260px;
+        max-width: 80%;
+    }
+
+    .right-section {
+        padding: 30px 25px 35px;
+    }
+
+    .right-section h2 {
+        font-size: 28px;
+    }
+
+    .register-subtitle {
+        font-size: 14px;
+        margin-bottom: 25px;
+    }
+
+    .right-section form {
+        gap: 14px;
+    }
+
+    .right-section input {
+        box-sizing: border-box;
+        padding: 14px 16px;
+        font-size: 15px;
+    }
+
+    .right-section button {
+        padding: 14px;
+        font-size: 16px;
+    }
+
+    .login-text {
+        margin-top: 20px;
+        font-size: 14px;
+    }
+
+    .right-section button:hover {
+        transform: none;
+    }
+}
+
+
+/* ================= SMALL PHONES ================= */
+
+@media (max-width: 480px) {
+
+    .register-container {
+        padding: 12px;
+    }
+
+    .register-card {
+        border-radius: 18px;
+    }
+
+    .left-section {
+        padding: 25px 18px 5px;
+    }
+
+    .register-image {
+        width: 210px;
+    }
+
+    .right-section {
+        padding: 25px 18px 30px;
+    }
+
+    .right-section h2 {
+        font-size: 25px;
+    }
+
+    .register-subtitle {
+        font-size: 13px;
+        margin-bottom: 20px;
+    }
+
+    .right-section input {
+        padding: 13px 14px;
+        font-size: 14px;
+    }
+
+    .right-section button {
+        padding: 13px;
+        font-size: 15px;
+    }
+
+}

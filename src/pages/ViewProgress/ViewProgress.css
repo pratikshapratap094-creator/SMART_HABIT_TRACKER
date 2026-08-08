@@ -167,3 +167,184 @@
 .motivation p{
     color:#555;
 }
+
+/* ================= RESPONSIVE VIEW PROGRESS ================= */
+
+@media (max-width: 768px) {
+
+    .progress-page {
+        flex-direction: column;
+    }
+
+    .progress-content {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 30px 20px;
+    }
+
+    .back-btn {
+        font-size: 17px;
+        margin-bottom: 18px;
+    }
+
+    .habit-header {
+        gap: 14px;
+        margin-bottom: 25px;
+    }
+
+    .habit-icon {
+        width: 55px;
+        height: 55px;
+        font-size: 28px;
+        flex-shrink: 0;
+    }
+
+    .habit-header h2 {
+        font-size: 24px;
+    }
+
+    .habit-header p {
+        font-size: 15px;
+    }
+
+    .month-title {
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+
+    .circle-wrapper {
+        margin-bottom: 30px;
+    }
+
+    .circle-progress {
+        width: 180px;
+        height: 180px;
+    }
+
+    .circle-inner {
+        width: 130px;
+        height: 130px;
+    }
+
+    .circle-inner h1 {
+        font-size: 32px;
+    }
+
+    .circle-inner span {
+        font-size: 15px;
+    }
+
+    /* Statistics */
+
+    .stats {
+        width: 100%;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-bottom: 28px;
+    }
+
+    .stat-box {
+        flex: 1 1 120px;
+        width: auto;
+        box-sizing: border-box;
+        padding: 16px 10px;
+    }
+
+    .stat-box h2 {
+        font-size: 22px;
+        margin-bottom: 7px;
+    }
+
+    .stat-box p {
+        font-size: 13px;
+    }
+
+    /* Motivation */
+
+    .motivation {
+        width: 100%;
+        max-width: 540px;
+        box-sizing: border-box;
+        padding: 16px;
+    }
+
+    .motivation p {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+}
+
+
+/* ================= SMALL PHONES ================= */
+
+@media (max-width: 480px) {
+
+    .progress-content {
+        padding: 25px 14px;
+    }
+
+    .habit-header {
+        gap: 11px;
+    }
+
+    .habit-icon {
+        width: 48px;
+        height: 48px;
+        font-size: 24px;
+        border-radius: 13px;
+    }
+
+    .habit-header h2 {
+        font-size: 20px;
+    }
+
+    .habit-header p {
+        font-size: 13px;
+    }
+
+    .month-title {
+        font-size: 18px;
+    }
+
+    .circle-progress {
+        width: 155px;
+        height: 155px;
+    }
+
+    .circle-inner {
+        width: 112px;
+        height: 112px;
+    }
+
+    .circle-inner h1 {
+        font-size: 28px;
+    }
+
+    .circle-inner span {
+        font-size: 13px;
+    }
+
+    .stat-box {
+        flex: 1 1 100px;
+        padding: 14px 8px;
+    }
+
+    .stat-box h2 {
+        font-size: 19px;
+    }
+
+    .stat-box p {
+        font-size: 12px;
+    }
+
+    .motivation {
+        padding: 14px;
+        gap: 10px;
+    }
+
+    .star {
+        font-size: 23px;
+    }
+
+}
